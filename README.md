@@ -1,6 +1,14 @@
 # parse-server-example (kenson's fork)
 ## Maintainer: Kenson Leung
 
+### Read ./run-scripts/runapp.json for environment variables
+Requirements:
+ * nodejs 10 or above.
+ * mongodb
+ * pm2
+#
+
+
 Example project using the [parse-server](https://github.com/ParsePlatform/parse-server) module on Express.
 
 Read the full Parse Server guide here: https://github.com/ParsePlatform/parse-server/wiki/Parse-Server-Guide

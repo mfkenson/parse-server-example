@@ -1,0 +1,23 @@
+{
+  "apps" : [{
+    "name"        : "parse-server-example",
+    "script"      : "./index.js",
+    "watch"       : ["index.js", "pm2-config.json", "public", "cloud"],
+    "ignore_watch" : ["node_modules", "logs", ".git"],
+    "error_file" : "./logs/child-err.log",
+    "out_file"   : "./logs/child-out.log",
+    "instances" : "1",
+    "env": {
+      "NODE_ENV": "development",
+      "PARSE_MOUNT": "/api/v1",
+      "PORT": "10201",
+      "APP_ID": "BE_WATER",
+      "DATABASE_URI": "mongodb://localhost:27017/BE_WATER",
+      "MASTER_KEY": "BE_WATER",
+      "SERVER_URL": "http://127.0.0.1:10201/api/v1"
+    },
+    "env_production" : {
+      "NODE_ENV": "production"
+    }
+  }]
+}

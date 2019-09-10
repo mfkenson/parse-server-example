@@ -15,7 +15,8 @@
     "parse-server": "*"
   },
   "scripts": {
-    "start": "node index.js"
+    "start": "node index.js",
+    "go": "pm2 delete parse-server-example;rm ./logs/*; pm2 start pm2-config.json"
   },
   "engines": {
     "node": ">=10"
