@@ -14,7 +14,8 @@
       "APP_ID": "BE_WATER",
       "DATABASE_URI": "mongodb://localhost:27017/BE_WATER",
       "MASTER_KEY": "BE_WATER",
-      "SERVER_URL": "http://127.0.0.1:10201/api/v1"
+      "SERVER_URL": "http://127.0.0.1:10201/api/v1",
+      "ORM_DB_CONN_STR": "mysql://root:123456@127.0.0.1:3306/hello_orm"
     },
     "env_production" : {
       "NODE_ENV": "production"

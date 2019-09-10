@@ -11,8 +11,15 @@
   "dependencies": {
     "express": "^4.17.1",
     "kerberos": "~0.0.x",
+    "mariadb": "^2.1.1",
+    "mysql2": "^1.7.0",
     "parse": "*",
-    "parse-server": "*"
+    "parse-server": "*",
+    "pg": "^7.12.1",
+    "pg-hstore": "^2.3.3",
+    "sequelize": "^5.18.4",
+    "sqlite3": "^4.1.0",
+    "tedious": "^6.3.0"
   },
   "scripts": {
     "start": "node index.js",
