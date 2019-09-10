@@ -15,3 +15,12 @@ Parse.Cloud.define('payment@list_customers', payment.cloudFunctions.listCustomer
 
 const push = require('./modules/push');
 Parse.Cloud.define('push@list_devices', push.cloudFunctions.listDevices);
+
+const email = require('./modules/email');
+Parse.Cloud.define('email@send', email.cloudFunctions.send);
+
+const user = require('./modules/user');
+Parse.Cloud.define('user@test', user.cloudFunctions.test);
+Parse.Cloud.define('user@sign_up', user.cloudFunctions.signUp);
+Parse.Cloud.define('user@sign_in', user.cloudFunctions.signIn);
+Parse.Cloud.define('user@list', user.cloudFunctions.list);

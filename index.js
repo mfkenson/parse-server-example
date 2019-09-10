@@ -41,6 +41,34 @@ app.get('/', function(req, res) {
   res.status(200).send('I dream of being a website.  Please star the parse-server repo on GitHub!');
 });
 
+
+var ParseDashboard = require('parse-dashboard');
+var options = {
+  allowInsecureHTTP: true,
+  "useEncryptedPasswords": false
+};
+
+var dashboard = new ParseDashboard({
+  "apps": [
+    {
+      "serverURL": process.env.SERVER_URL,
+      "appId": process.env.APP_ID,
+      "masterKey": process.env.MASTER_KEY,
+      "appName": process.env.APP_ID
+    }
+  ],
+  users: [
+    {
+      "user": process.env.APP_ID,
+      "pass": process.env.MASTER_KEY
+    }
+  ]
+}, options);
+// make the Parse Dashboard available at /dashboard
+app.use('/dashboard', dashboard);
+
+
+
 // There will be a test page available on the /test path of your server url
 // Remove this before launching your app
 app.get('/test', function(req, res) {
