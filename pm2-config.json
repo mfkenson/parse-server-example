@@ -16,7 +16,10 @@
       "MASTER_KEY": "BE_WATER",
       "SERVER_URL": "http://127.0.0.1:10201/api/v1",
       "ORM_DB_CONN_STR": "mysql://root:123456@127.0.0.1:3306/hello_orm",
-      "STRIPE_SECRET_KEY": ""
+      "STRIPE_SECRET_KEY": "",
+      "ONE_SIGNAL_AUTH_KEY": "",
+      "ONE_SIGNAL_APP_AUTH_KEY": "",
+      "ONE_SIGNAL_APP_ID": ""
     },
     "env_production" : {
       "NODE_ENV": "production"

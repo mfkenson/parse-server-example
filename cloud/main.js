@@ -12,3 +12,6 @@ Parse.Cloud.define('orm@destroy', orm.cloudFunctions.destroy);
 const payment = require('./modules/payment');
 Parse.Cloud.define('payment@test', payment.cloudFunctions.test);
 Parse.Cloud.define('payment@list_customers', payment.cloudFunctions.listCustomers);
+
+const push = require('./modules/push');
+Parse.Cloud.define('push@list_devices', push.cloudFunctions.listDevices);
