@@ -31,3 +31,4 @@ node_modules
 
 # Webstorm
 .idea/
+pm2-config.*.json

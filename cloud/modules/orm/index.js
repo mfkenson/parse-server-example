@@ -106,4 +106,4 @@ let cloudFunctions = {
 
 module.exports = {
     cloudFunctions: cloudFunctions
-}
+};

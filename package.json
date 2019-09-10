@@ -19,11 +19,13 @@
     "pg-hstore": "^2.3.3",
     "sequelize": "^5.18.4",
     "sqlite3": "^4.1.0",
+    "stripe": "^7.9.0",
     "tedious": "^6.3.0"
   },
   "scripts": {
     "start": "node index.js",
-    "go": "pm2 delete parse-server-example;rm ./logs/*; pm2 start pm2-config.json"
+    "go": "pm2 delete parse-server-example;rm ./logs/*; pm2 start pm2-config.json",
+    "local": "pm2 delete parse-server-example;rm ./logs/*; pm2 start pm2-config.local.json"
   },
   "engines": {
     "node": ">=10"
