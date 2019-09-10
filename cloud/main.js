@@ -24,3 +24,8 @@ Parse.Cloud.define('user@test', user.cloudFunctions.test);
 Parse.Cloud.define('user@sign_up', user.cloudFunctions.signUp);
 Parse.Cloud.define('user@sign_in', user.cloudFunctions.signIn);
 Parse.Cloud.define('user@list', user.cloudFunctions.list);
+
+const role = require('./modules/role');
+Parse.Cloud.define('role@init', role.cloudFunctions.init);
+Parse.Cloud.define('role@list', role.cloudFunctions.list);
+Parse.Cloud.define('role@listUsers', role.cloudFunctions.listRoleUsers);
