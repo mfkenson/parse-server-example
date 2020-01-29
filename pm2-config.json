@@ -20,7 +20,9 @@
       "ONE_SIGNAL_AUTH_KEY": "",
       "ONE_SIGNAL_APP_AUTH_KEY": "",
       "ONE_SIGNAL_APP_ID": "",
-      "SENDGRID_API_KEY": ""
+      "SENDGRID_API_KEY": "",
+      "FIREBASE_SERVICE_ACCOUNT_KEY": "ABS_PATH_JSON_FIREBASE_SERVICE_ACCOUNT",
+      "FIREBASE_DATABASE_URL": "https://YOURAPP.firebaseio.com"
     },
     "env_production" : {
       "NODE_ENV": "production"

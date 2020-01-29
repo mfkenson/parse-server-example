@@ -4,6 +4,7 @@
 var express = require('express');
 var ParseServer = require('parse-server').ParseServer;
 var path = require('path');
+var firebaseAuthAdapter = require('parse-server-firebase-auth-adapter')
 
 var databaseUri = process.env.DATABASE_URI || process.env.MONGODB_URI;
 
@@ -22,6 +23,9 @@ var api = new ParseServer({
   },
   allowClientClassCreation: true, //production checkpoint: should disable on production
   protectedFields:[],
+  auth:{
+    firebase: firebaseAuthAdapter
+  }
 });
 // Client-keys like the javascript key or the .NET key are not necessary with parse-server
 // If you wish you require them, you can set them as options in the initialization above:

@@ -1,4 +1,7 @@
 Parse.Cloud.define('hello', function(req, res) {
+  if (req.user){
+    return 'Hi ' + req.user.get('username');
+  }
   return 'Hi Kenson';
 });
 
@@ -29,3 +32,8 @@ const role = require('./modules/role');
 Parse.Cloud.define('role@init', role.cloudFunctions.init);
 Parse.Cloud.define('role@list', role.cloudFunctions.list);
 Parse.Cloud.define('role@listUsers', role.cloudFunctions.listRoleUsers);
+
+const firebase = require('./modules/firebase');
+Parse.Cloud.define('firebase@init', firebase.init);
+Parse.Cloud.define('firebase@verifyAuth', firebase.cloudFunctions.verifyAuth);
+Parse.Cloud.define('firebase@login', firebase.cloudFunctions.login);

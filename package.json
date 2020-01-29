@@ -11,14 +11,16 @@
   "dependencies": {
     "@sendgrid/mail": "^6.4.0",
     "express": "^4.17.1",
+    "firebase-admin": "^8.9.2",
     "generate-password": "^1.4.2",
     "kerberos": "~0.0.x",
     "mariadb": "^2.1.1",
     "mysql2": "^1.7.0",
     "onesignal-node": "^2.1.1",
     "parse": "*",
-    "parse-dashboard": "^2.0.1",
+    "parse-dashboard": "^2.0.5",
     "parse-server": "*",
+    "parse-server-firebase-auth-adapter": "0.0.4",
     "pg": "^7.12.1",
     "pg-hstore": "^2.3.3",
     "sequelize": "^5.18.4",
@@ -27,7 +29,9 @@
     "tedious": "^6.3.0"
   },
   "scripts": {
-    "start": "node index.js",
+    "start": "pm2 start pm2-config.json",
+    "delete": "pm2 delete parse-server-example",
+    "rm-logs": "rm -rf logs",
     "go": "pm2 delete parse-server-example;rm ./logs/*; pm2 start pm2-config.json",
     "local": "pm2 delete parse-server-example;rm ./logs/*; pm2 start pm2-config.local.json"
   },
